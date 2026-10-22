@@ -1,0 +1,131 @@
+<!--
+  SHARED DESIGN TOKENS, LIGHT THEME: same keys as DesignTokens.xaml (the dark theme), light values (D048, D058 theme options).
+  The WDM palette; canonical copy was 08_templates/DesignTokens.Light.xaml; the copy inside each app must be byte-identical
+  (checked by 09_tools/validate_catalog.py). Generated from DesignTokens.xaml by the colour map in the repository history; edit the canonical file, then copy it.
+-->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- ══════════════════════════════════════════════════════════
+         SURFACE COLORS
+    ══════════════════════════════════════════════════════════ -->
+    <Color x:Key="c.SurfaceBase">#F4F6FA</Color>
+    <Color x:Key="c.SurfaceOverlay">#EDF0F6</Color>
+    <Color x:Key="c.SurfaceRaised">#FFFFFF</Color>
+    <Color x:Key="c.SurfaceSunken">#FFFFFF</Color>
+    <Color x:Key="c.SurfaceInteractive">#E8EDF5</Color>
+    <Color x:Key="c.SurfaceSelected">#E6EEFF</Color>
+    <Color x:Key="c.SurfaceBorder">#E3E8F0</Color>
+    <Color x:Key="c.SurfaceBorderStrong">#C5CEDB</Color>
+
+    <SolidColorBrush x:Key="SurfaceBase"         Color="{StaticResource c.SurfaceBase}"/>
+    <SolidColorBrush x:Key="SurfaceOverlay"      Color="{StaticResource c.SurfaceOverlay}"/>
+    <SolidColorBrush x:Key="SurfaceRaised"       Color="{StaticResource c.SurfaceRaised}"/>
+    <SolidColorBrush x:Key="SurfaceSunken"       Color="{StaticResource c.SurfaceSunken}"/>
+    <SolidColorBrush x:Key="SurfaceInteractive"  Color="{StaticResource c.SurfaceInteractive}"/>
+    <SolidColorBrush x:Key="SurfaceSelected"     Color="{StaticResource c.SurfaceSelected}"/>
+    <SolidColorBrush x:Key="SurfaceBorder"       Color="{StaticResource c.SurfaceBorder}"/>
+    <SolidColorBrush x:Key="SurfaceBorderStrong" Color="{StaticResource c.SurfaceBorderStrong}"/>
+
+    <!-- ══════════════════════════════════════════════════════════
+         ACCENT / BRAND COLORS
+    ══════════════════════════════════════════════════════════ -->
+    <Color x:Key="c.AccentPrimary">#2563EB</Color>
+    <Color x:Key="c.AccentPrimaryHover">#1D4FD8</Color>
+    <Color x:Key="c.AccentPrimaryMuted">#182563EB</Color>
+    <Color x:Key="c.AccentForge">#C2410C</Color>
+    <Color x:Key="c.AccentForgeHover">#9A3412</Color>
+    <Color x:Key="c.AccentForgeMuted">#15C2410C</Color>
+
+    <Color x:Key="c.AccentViolet">#7C3AED</Color>
+    <Color x:Key="c.AccentVioletMuted">#157C3AED</Color>
+    <SolidColorBrush x:Key="AccentViolet"      Color="{StaticResource c.AccentViolet}"/>
+    <SolidColorBrush x:Key="AccentVioletMuted" Color="{StaticResource c.AccentVioletMuted}"/>
+
+    <SolidColorBrush x:Key="AccentPrimary"      Color="{StaticResource c.AccentPrimary}"/>
+    <SolidColorBrush x:Key="AccentPrimaryHover" Color="{StaticResource c.AccentPrimaryHover}"/>
+    <SolidColorBrush x:Key="AccentPrimaryMuted" Color="{StaticResource c.AccentPrimaryMuted}"/>
+    <SolidColorBrush x:Key="AccentForge"        Color="{StaticResource c.AccentForge}"/>
+    <SolidColorBrush x:Key="AccentForgeHover"   Color="{StaticResource c.AccentForgeHover}"/>
+    <SolidColorBrush x:Key="AccentForgeMuted"   Color="{StaticResource c.AccentForgeMuted}"/>
+
+    <!-- ══════════════════════════════════════════════════════════
+         SEMANTIC STATUS COLORS
+    ══════════════════════════════════════════════════════════ -->
+    <Color x:Key="c.StatusError">#DC2626</Color>
+    <Color x:Key="c.StatusErrorMuted">#18DC2626</Color>
+    <Color x:Key="c.StatusWarning">#D97706</Color>
+    <Color x:Key="c.StatusWarningMuted">#18D97706</Color>
+    <Color x:Key="c.StatusSuccess">#16A34A</Color>
+    <Color x:Key="c.StatusSuccessMuted">#1816A34A</Color>
+    <Color x:Key="c.StatusInfo">#2563EB</Color>
+    <Color x:Key="c.StatusInfoMuted">#182563EB</Color>
+
+    <SolidColorBrush x:Key="StatusError"        Color="{StaticResource c.StatusError}"/>
+    <SolidColorBrush x:Key="StatusErrorMuted"   Color="{StaticResource c.StatusErrorMuted}"/>
+    <SolidColorBrush x:Key="StatusWarning"      Color="{StaticResource c.StatusWarning}"/>
+    <SolidColorBrush x:Key="StatusWarningMuted" Color="{StaticResource c.StatusWarningMuted}"/>
+    <SolidColorBrush x:Key="StatusSuccess"      Color="{StaticResource c.StatusSuccess}"/>
+    <SolidColorBrush x:Key="StatusSuccessMuted" Color="{StaticResource c.StatusSuccessMuted}"/>
+    <SolidColorBrush x:Key="StatusInfo"         Color="{StaticResource c.StatusInfo}"/>
+    <SolidColorBrush x:Key="StatusInfoMuted"    Color="{StaticResource c.StatusInfoMuted}"/>
+
+    <!-- ══════════════════════════════════════════════════════════
+         TEXT COLORS
+    ══════════════════════════════════════════════════════════ -->
+    <Color x:Key="c.TextPrimary">#0F172A</Color>
+    <Color x:Key="c.TextSecondary">#334155</Color>
+    <Color x:Key="c.TextTertiary">#6B7A90</Color>
+    <Color x:Key="c.TextInverse">#FFFFFF</Color>
+    <Color x:Key="c.TextLink">#2563EB</Color>
+
+    <SolidColorBrush x:Key="TextPrimary"   Color="{StaticResource c.TextPrimary}"/>
+    <SolidColorBrush x:Key="TextSecondary" Color="{StaticResource c.TextSecondary}"/>
+    <SolidColorBrush x:Key="TextTertiary"  Color="{StaticResource c.TextTertiary}"/>
+    <SolidColorBrush x:Key="TextInverse"   Color="{StaticResource c.TextInverse}"/>
+    <SolidColorBrush x:Key="TextLink"      Color="{StaticResource c.TextLink}"/>
+
+    <!-- ══════════════════════════════════════════════════════════
+         WINDOW CHROME & OVERLAYS (Windows 11 caption buttons, dialog scrim)
+    ══════════════════════════════════════════════════════════ -->
+    <Color x:Key="c.CaptionHover">#14000000</Color>
+    <Color x:Key="c.CaptionPressed">#24000000</Color>
+    <Color x:Key="c.CaptionCloseHover">#C42B1C</Color>
+    <Color x:Key="c.CaptionClosePressed">#A82315</Color>
+    <Color x:Key="c.Scrim">#99000000</Color>
+    <SolidColorBrush x:Key="CaptionHover"        Color="{StaticResource c.CaptionHover}"/>
+    <SolidColorBrush x:Key="CaptionPressed"      Color="{StaticResource c.CaptionPressed}"/>
+    <SolidColorBrush x:Key="CaptionCloseHover"   Color="{StaticResource c.CaptionCloseHover}"/>
+    <SolidColorBrush x:Key="CaptionClosePressed" Color="{StaticResource c.CaptionClosePressed}"/>
+    <SolidColorBrush x:Key="Scrim"               Color="{StaticResource c.Scrim}"/>
+
+    <!-- ══════════════════════════════════════════════════════════
+         TYPOGRAPHY (Windows 11 Variable Font Hierarchy)
+    ══════════════════════════════════════════════════════════ -->
+    <FontFamily x:Key="Font.UI">Segoe UI Variable Display, Segoe UI Variable Text, Segoe UI, sans-serif</FontFamily>
+    <FontFamily x:Key="Font.Mono">Cascadia Code, Consolas, Courier New, monospace</FontFamily>
+
+    <sys:Double x:Key="FontSize.Title">18</sys:Double>
+    <sys:Double x:Key="FontSize.Heading">15</sys:Double>
+    <sys:Double x:Key="FontSize.Body">13</sys:Double>
+    <sys:Double x:Key="FontSize.Caption">11</sys:Double>
+    <sys:Double x:Key="FontSize.Hero">28</sys:Double>
+
+    <!-- ══════════════════════════════════════════════════════════
+         RADII & SPACING DIMENSIONS
+    ══════════════════════════════════════════════════════════ -->
+    <CornerRadius x:Key="Radius.Sm">4</CornerRadius>
+    <CornerRadius x:Key="Radius.Md">8</CornerRadius>
+    <CornerRadius x:Key="Radius.Lg">12</CornerRadius>
+    <CornerRadius x:Key="Radius.Window">8</CornerRadius>
+    <CornerRadius x:Key="Radius.Full">4</CornerRadius>
+
+    <Thickness x:Key="Padding.Card">16</Thickness>
+    <Thickness x:Key="Padding.Button">14,8</Thickness>
+    <Thickness x:Key="Padding.ButtonSm">10,5</Thickness>
+
+    <sys:Double x:Key="Btn.HeightSm">28</sys:Double>
+    <sys:Double x:Key="Btn.HeightMd">34</sys:Double>
+</ResourceDictionary>

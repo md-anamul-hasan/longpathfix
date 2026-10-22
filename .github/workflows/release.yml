@@ -1,0 +1,117 @@
+name: release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      # Set the SIGNPATH_ORGANIZATION_ID repository variable and SIGNPATH_API_TOKEN secret once SignPath approves the project.
+      SIGN: ${{ vars.SIGNPATH_ORGANIZATION_ID != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Test
+        run: dotnet test LongPathFix.slnx -c Release --nologo
+
+      - name: Install Inno Setup
+        run: choco install innosetup --no-progress -y
+
+      - name: Publish binaries
+        run: ./scripts/build-installer.ps1 -PublishOnly
+        shell: pwsh
+
+      # ---- sign the app's own binary before packaging
+      - name: Collect binaries to sign
+        if: env.SIGN == 'true'
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force dist/unsigned | Out-Null
+          Copy-Item dist/stage/LongPathFix.exe dist/unsigned
+      - name: Upload binaries
+        if: env.SIGN == 'true'
+        id: upload-binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: binaries-unsigned
+          path: dist/unsigned/*
+      - name: Sign binaries
+        if: env.SIGN == 'true'
+        uses: signpath/github-action-submit-signing-request@v1
+        with:
+          api-token: ${{ secrets.SIGNPATH_API_TOKEN }}
+          organization-id: ${{ vars.SIGNPATH_ORGANIZATION_ID }}
+          project-slug: longpathfix
+          signing-policy-slug: release-signing
+          artifact-configuration-slug: binaries
+          github-artifact-id: ${{ steps.upload-binaries.outputs.artifact-id }}
+          wait-for-completion: true
+          output-artifact-directory: dist/signed
+      - name: Replace with signed binaries
+        if: env.SIGN == 'true'
+        shell: pwsh
+        run: Copy-Item dist/signed/* dist/stage -Force
+
+      - name: Build installer
+        run: ./scripts/build-installer.ps1 -SkipPublish
+        shell: pwsh
+
+      # ---- sign the installer
+      - name: Upload installer
+        if: env.SIGN == 'true'
+        id: upload-installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: installer-unsigned
+          path: dist/installer/LongPathFix-Setup-*.exe
+      - name: Sign installer
+        if: env.SIGN == 'true'
+        uses: signpath/github-action-submit-signing-request@v1
+        with:
+          api-token: ${{ secrets.SIGNPATH_API_TOKEN }}
+          organization-id: ${{ vars.SIGNPATH_ORGANIZATION_ID }}
+          project-slug: longpathfix
+          signing-policy-slug: release-signing
+          artifact-configuration-slug: installer
+          github-artifact-id: ${{ steps.upload-installer.outputs.artifact-id }}
+          wait-for-completion: true
+          output-artifact-directory: dist/signed-installer
+      - name: Replace with signed installer
+        if: env.SIGN == 'true'
+        shell: pwsh
+        run: Copy-Item dist/signed-installer/LongPathFix-Setup-*.exe dist/installer -Force
+
+      - name: Package release files
+        shell: pwsh
+        run: |
+          $v = ([xml](Get-Content Directory.Build.props)).Project.PropertyGroup.Version
+          New-Item -ItemType Directory -Force dist/release | Out-Null
+          Copy-Item "dist/installer/LongPathFix-Setup-$v.exe" dist/release
+          # LF endings so `sha256sum -c` works on Linux and macOS too
+          $sums = Get-ChildItem dist/release -File | ForEach-Object { "$((Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower())  $($_.Name)" }
+          [IO.File]::WriteAllText("$PWD/dist/release/SHA256SUMS.txt", ($sums -join "`n") + "`n")
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: release
+          path: dist/release/*
+
+      - name: Publish GitHub release
+        if: startsWith(github.ref, 'refs/tags/v')
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $v = "${{ github.ref_name }}".TrimStart('v')
+          $notes = "docs/release-notes-$v.md"
+          if (-not (Test-Path $notes)) { throw "Missing $notes - write the release notes before tagging" }
+          gh release create "${{ github.ref_name }}" dist/release/* --title "LongPathFix $v" --notes-file $notes

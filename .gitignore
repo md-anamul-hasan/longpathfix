@@ -1,0 +1,22 @@
+## Build and Output directories
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+publish/
+scratch/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio & JetBrains
+.vs/
+.idea/
+*.user
+*.suo
+
+## OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## Release output (scripts/package-release.ps1) - never commit
+dist/

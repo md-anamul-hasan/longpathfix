@@ -1,0 +1,319 @@
+<Window x:Class="LongPathFix.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:LongPathFix.ViewModels"
+        xmlns:ctrl="clr-namespace:LongPathFix.Controls"
+        xmlns:theme="clr-namespace:Mdah.Theming"
+        mc:Ignorable="d"
+        Title="LongPathFix"
+        Icon="Assets/icon.ico"
+        Height="780" Width="1160"
+        MinHeight="600" MinWidth="900"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        FontFamily="{DynamicResource Font.UI}"
+        d:DataContext="{d:DesignInstance Type=vm:MainViewModel}">
+
+    <Window.DataContext>
+        <vm:MainViewModel/>
+    </Window.DataContext>
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="40" ResizeBorderThickness="6" GlassFrameThickness="0,0,0,1"/>
+    </WindowChrome.WindowChrome>
+
+    <Window.Resources>
+        <Style x:Key="Label" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextTertiary}"/>
+        </Style>
+        <Style x:Key="Muted" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextSecondary}"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="LineHeight" Value="20"/>
+        </Style>
+        <Style x:Key="PageTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimary}"/>
+        </Style>
+        <Style x:Key="SectionTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimary}"/>
+        </Style>
+        <Style x:Key="Panel" TargetType="Border">
+            <Setter Property="Background" Value="{DynamicResource SurfaceRaised}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource SurfaceBorder}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="Padding" Value="22"/>
+        </Style>
+        <Style x:Key="StatValue" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimary}"/>
+            <Setter Property="TextTrimming" Value="CharacterEllipsis"/>
+        </Style>
+        <Style x:Key="KvValue" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="{DynamicResource TextPrimary}"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="0,2,0,0"/>
+        </Style>
+        <Style x:Key="NavItem" TargetType="RadioButton" BasedOn="{StaticResource SidebarNavButtonStyle}">
+            <Setter Property="Margin" Value="0,0,0,2"/>
+        </Style>
+    </Window.Resources>
+
+    <Border Background="{DynamicResource SurfaceBase}"
+            BorderBrush="{DynamicResource SurfaceBorderStrong}">
+        <Border.Style>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" Value="8"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding WindowState, RelativeSource={RelativeSource AncestorType=Window}}" Value="Maximized">
+                        <Setter Property="CornerRadius" Value="0"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="28"/>
+            </Grid.RowDefinitions>
+
+            <ctrl:TitleBar Grid.Row="0"/>
+
+            <Grid Grid.Row="1" x:Name="Body">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="208"/>
+                    <ColumnDefinition Width="1"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- ───────── Navigation ───────── -->
+                <Border Background="{DynamicResource SurfaceOverlay}" Padding="12,16,12,14">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel>
+                            <RadioButton Style="{StaticResource NavItem}" GroupName="Nav"
+                                         IsChecked="{Binding SelectedTabIndex, Converter={StaticResource IntToRadioBool}, ConverterParameter=0}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Path Width="14" Height="14" Data="{StaticResource Svg.Search}" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}" Stretch="Uniform" Margin="0,0,10,0"/>
+                                    <TextBlock Text="Scan and fix"/>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton Style="{StaticResource NavItem}" GroupName="Nav"
+                                         IsChecked="{Binding SelectedTabIndex, Converter={StaticResource IntToRadioBool}, ConverterParameter=1}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Path Width="14" Height="14" Data="{StaticResource Svg.Check}" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}" Stretch="Uniform" Margin="0,0,10,0"/>
+                                    <TextBlock Text="History"/>
+                                </StackPanel>
+                            </RadioButton>
+                            <RadioButton Style="{StaticResource NavItem}" GroupName="Nav"
+                                         IsChecked="{Binding SelectedTabIndex, Converter={StaticResource IntToRadioBool}, ConverterParameter=2}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Path Width="14" Height="14" Data="{StaticResource Svg.Info}" Fill="{Binding Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}" Stretch="Uniform" Margin="0,0,10,0"/>
+                                    <TextBlock Text="How it works"/>
+                                </StackPanel>
+                            </RadioButton>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1">
+                            <theme:ThemeToggleButton Margin="0,0,0,6"/>
+                        <!-- Open source link -->
+                        <Button Command="{Binding OpenRepositoryCommand}" Cursor="Hand" HorizontalContentAlignment="Stretch" ToolTip="Open the project on GitHub">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border x:Name="Bg" Background="Transparent" CornerRadius="8" Padding="10,8">
+                                        <ContentPresenter/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter TargetName="Bg" Property="Background" Value="{DynamicResource SurfaceInteractive}"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Button.Template>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Ellipse Width="7" Height="7" Margin="0,0,8,0" VerticalAlignment="Center" Fill="{DynamicResource StatusSuccess}"/>
+                                    <TextBlock Text="Free and open source" FontSize="13" FontWeight="SemiBold" Foreground="{DynamicResource TextPrimary}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding AppVersion, StringFormat=v{0} · MIT · GitHub}" Style="{StaticResource Label}" Margin="15,2,0,0" TextTrimming="CharacterEllipsis"/>
+                            </StackPanel>
+                        </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Column="1" Background="{DynamicResource SurfaceBorder}"/>
+
+                <!-- ───────── Content ───────── -->
+                <Grid Grid.Column="2" Background="{DynamicResource SurfaceBase}">
+                        <!-- ═════ SCAN AND FIX ═════ -->
+                        <Grid Visibility="{Binding SelectedTabIndex, Converter={StaticResource IntToVis}, ConverterParameter=0}">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="32,26,32,32">
+                            <StackPanel MaxWidth="1000">
+                                <TextBlock Text="Fix long paths and bad names" Style="{StaticResource PageTitle}"/>
+                                <TextBlock Style="{StaticResource Muted}" Margin="0,6,0,18"
+                                           Text="Pick a folder. LongPathFix finds paths that are too long and names that break backups, ZIP files, cloud sync and copies (trailing dots or spaces, reserved names like CON, illegal characters, names that differ only by case) and plans the renames. You see the plan first; only names change, never file content."/>
+
+                                <Border Style="{StaticResource Panel}" Margin="0,0,0,16">
+                                    <StackPanel>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBox Text="{Binding Root, UpdateSourceTrigger=PropertyChanged}" Height="38" VerticalContentAlignment="Center" Padding="10,0" FontSize="14"
+                                                     Background="{DynamicResource SurfaceSunken}" Foreground="{DynamicResource TextPrimary}" BorderBrush="{DynamicResource SurfaceBorderStrong}" CaretBrush="{DynamicResource TextPrimary}"/>
+                                            <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="12,0,0,0">
+                                                <Button Style="{StaticResource SecondaryButton}" Content="Folder…" Command="{Binding BrowseCommand}" Margin="0,0,8,0" MinWidth="84"/>
+                                                <Button Style="{StaticResource PrimaryButton}" Content="Scan" Command="{Binding ScanCommand}" MinWidth="84"/>
+                                            </StackPanel>
+                                        </Grid>
+                                        <TextBlock Text="Longest path allowed (characters)" Style="{StaticResource Label}" Margin="0,14,0,6"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <RadioButton GroupName="Limit" Content="259 (Windows classic limit)" IsChecked="{Binding LimitIndex, Converter={StaticResource IntToRadioBool}, ConverterParameter=0}" Margin="0,0,20,0" Foreground="{DynamicResource TextPrimary}"/>
+                                            <RadioButton GroupName="Limit" Content="240 (safe for ZIP and backup tools)" IsChecked="{Binding LimitIndex, Converter={StaticResource IntToRadioBool}, ConverterParameter=1}" Margin="0,0,20,0" Foreground="{DynamicResource TextPrimary}"/>
+                                            <RadioButton GroupName="Limit" Content="200 (strict)" IsChecked="{Binding LimitIndex, Converter={StaticResource IntToRadioBool}, ConverterParameter=2}" Foreground="{DynamicResource TextPrimary}"/>
+                                        </StackPanel>
+                                        <TextBlock Text="Fix" Style="{StaticResource Label}" Margin="0,14,0,6"/>
+                                        <WrapPanel>
+                                            <CheckBox IsChecked="{Binding FixLong}" Content="Long paths and names" Margin="0,0,18,6" Foreground="{DynamicResource TextPrimary}"/>
+                                            <CheckBox IsChecked="{Binding FixTrailing}" Content="Trailing dots and spaces" Margin="0,0,18,6" Foreground="{DynamicResource TextPrimary}"/>
+                                            <CheckBox IsChecked="{Binding FixReserved}" Content="Reserved names" Margin="0,0,18,6" Foreground="{DynamicResource TextPrimary}"/>
+                                            <CheckBox IsChecked="{Binding FixIllegal}" Content="Illegal characters" Margin="0,0,18,6" Foreground="{DynamicResource TextPrimary}"/>
+                                            <CheckBox IsChecked="{Binding FixCase}" Content="Case clashes" Margin="0,0,18,6" Foreground="{DynamicResource TextPrimary}"/>
+                                        </WrapPanel>
+                                    </StackPanel>
+                                </Border>
+
+                                <TextBlock Text="{Binding Summary}" Style="{StaticResource Muted}" Margin="0,0,0,12" Visibility="{Binding HasPlan, Converter={StaticResource BoolToVisConverter}}"/>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,12" Visibility="{Binding HasPlan, Converter={StaticResource BoolToVisConverter}}">
+                                    <Button Style="{StaticResource PrimaryButton}" Content="Rename" Command="{Binding ApplyCommand}" Margin="0,0,8,0" Visibility="{Binding HasOps, Converter={StaticResource BoolToVisConverter}}"/>
+                                    <Button Style="{StaticResource SecondaryButton}" Content="Export findings (CSV)" Command="{Binding ExportCommand}"/>
+                                </StackPanel>
+                                <TextBlock Text="{Binding ShownNote}" Style="{StaticResource Label}" Margin="0,0,0,10" Visibility="{Binding HasShownNote, Converter={StaticResource BoolToVisConverter}}"/>
+
+                                <ItemsControl ItemsSource="{Binding Findings}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Style="{StaticResource Panel}" Margin="0,0,0,6" Padding="16,10">
+                                                <StackPanel>
+                                                    <TextBlock Text="{Binding Path}" FontFamily="Cascadia Mono, Consolas" FontSize="12.5" Foreground="{DynamicResource TextPrimary}" TextWrapping="Wrap"/>
+                                                    <TextBlock Text="{Binding Issues}" FontSize="12" Foreground="{DynamicResource StatusWarning}" Margin="0,4,0,0" TextWrapping="Wrap"/>
+                                                    <TextBlock Margin="0,4,0,0" FontSize="12.5" Foreground="{DynamicResource StatusSuccess}" TextWrapping="Wrap" Visibility="{Binding HasNew, Converter={StaticResource BoolToVisConverter}}">
+                                                        <Run Text="Rename to: "/><Run Text="{Binding NewName, Mode=OneWay}" FontFamily="Cascadia Mono, Consolas"/>
+                                                    </TextBlock>
+                                                    <TextBlock Text="{Binding Unresolved}" FontSize="12.5" Foreground="{DynamicResource StatusError}" Margin="0,4,0,0" TextWrapping="Wrap" Visibility="{Binding HasUnresolved, Converter={StaticResource BoolToVisConverter}}"/>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                                <TextBlock Text="Nothing to fix: no path is too long and no name is a problem." Style="{StaticResource Muted}" Visibility="{Binding ShowNothingFound, Converter={StaticResource BoolToVisConverter}}"/>
+                            </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+                        <!-- ═════ HISTORY ═════ -->
+                        <Grid Visibility="{Binding SelectedTabIndex, Converter={StaticResource IntToVis}, ConverterParameter=1}">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="32,26,32,32">
+                            <StackPanel MaxWidth="900" HorizontalAlignment="Left">
+                                <TextBlock Text="History" Style="{StaticResource PageTitle}"/>
+                                <TextBlock Style="{StaticResource Muted}" Margin="0,6,0,18"
+                                           Text="Every rename is logged. Undo gives each file and folder of a batch its old name back, deepest renames last. Items that were changed since are skipped and reported."/>
+                                <Button Style="{StaticResource SecondaryButton}" Content="Open the log folder" Command="{Binding OpenHistoryFolderCommand}" HorizontalAlignment="Left" Margin="0,0,0,16"/>
+                                <ItemsControl ItemsSource="{Binding History}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border Style="{StaticResource Panel}" Margin="0,0,0,8" Padding="18,12">
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="Auto"/>
+                                                    </Grid.ColumnDefinitions>
+                                                    <TextBlock Text="{Binding Title}" Style="{StaticResource SectionTitle}" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                                                    <Button Grid.Column="1" Style="{StaticResource SecondaryButton}" Content="Undo" Margin="16,0,0,0"
+                                                            Command="{Binding DataContext.UndoCommand, RelativeSource={RelativeSource AncestorType=Window}}" CommandParameter="{Binding}"/>
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                                <TextBlock Text="Nothing has been renamed yet." Style="{StaticResource Muted}" Visibility="{Binding HasHistory, Converter={StaticResource InvertedBoolToVisConverter}}"/>
+                            </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+                        <!-- ═════ HOW IT WORKS ═════ -->
+                        <Grid Visibility="{Binding SelectedTabIndex, Converter={StaticResource IntToVis}, ConverterParameter=2}">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="32,26,32,32">
+                            <StackPanel MaxWidth="780" HorizontalAlignment="Left">
+                                <TextBlock Text="How it works" Style="{StaticResource PageTitle}"/>
+                                <Border Style="{StaticResource Panel}" Margin="0,18,0,12"><StackPanel>
+                                    <TextBlock Text="What is found" Style="{StaticResource SectionTitle}" Margin="0,0,0,8"/>
+                                    <TextBlock Style="{StaticResource Muted}" Text="Paths over the limit you choose (259 is the classic Windows limit), names over 255 characters, names that end with a dot or a space or start with a space, reserved names (CON, PRN, AUX, NUL, COM1–9, LPT1–9), names with the characters &lt; &gt; : &quot; / \ | ? * or control characters, and names that differ only by capitalisation. Folders are listed with a trailing backslash."/>
+                                </StackPanel></Border>
+                                <Border Style="{StaticResource Panel}" Margin="0,0,0,12"><StackPanel>
+                                    <TextBlock Text="What the plan does" Style="{StaticResource SectionTitle}" Margin="0,0,0,8"/>
+                                    <TextBlock Style="{StaticResource Muted}" Text="Bad characters become _, trailing dots and spaces are cut, a reserved name gets an underscore (CON.txt becomes CON_.txt), clashing names get (2), (3). A path that is too long is shortened by cutting the file name first, then its folders from the deepest up, and the cut part is replaced by ~ and four letters or digits so the name stays unique; extensions are kept and names are never cut below 8 characters. If a path cannot fit even then, it is listed as not fixable by renaming."/>
+                                </StackPanel></Border>
+                                <Border Style="{StaticResource Panel}" Margin="0,0,0,12"><StackPanel>
+                                    <TextBlock Text="Safe by design" Style="{StaticResource SectionTitle}" Margin="0,0,0,8"/>
+                                    <TextBlock Style="{StaticResource Muted}" Text="You see every rename before anything happens. Only names change: nothing is moved, deleted or rewritten. The log is written as each rename is done, and Undo restores the old names. A rename is skipped (and reported) if the new name already exists. Links and junctions are listed but never entered. Warning: programs that point to a renamed file by its old path (shortcuts, project files, scripts) will need updating."/>
+                                </StackPanel></Border>
+                                <Border Style="{StaticResource Panel}"><StackPanel>
+                                    <TextBlock Text="Free and private" Style="{StaticResource SectionTitle}" Margin="0,0,0,8"/>
+                                    <TextBlock Style="{StaticResource Muted}" Text="LongPathFix is free and open source (MIT). It makes no network connections: nothing is sent anywhere, and there is no account, licence key or telemetry."/>
+                                </StackPanel></Border>
+                            </StackPanel>
+                            </ScrollViewer>
+                        </Grid>
+
+                        <!-- Toast -->
+                        <Border HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="24" MaxWidth="720" CornerRadius="10" Padding="16,11"
+                                Background="{DynamicResource SurfaceInteractive}" BorderBrush="{DynamicResource SurfaceBorderStrong}" BorderThickness="1"
+                                Visibility="{Binding IsStatusBannerVisible, Converter={StaticResource BoolToVisConverter}}">
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="24" ShadowDepth="4" Opacity="0.45" Color="Black"/>
+                            </Border.Effect>
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse Width="8" Height="8" Margin="0,0,10,0" VerticalAlignment="Center">
+                                    <Ellipse.Style>
+                                        <Style TargetType="Ellipse">
+                                            <Setter Property="Fill" Value="{DynamicResource StatusInfo}"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding StatusBannerType}" Value="Success"><Setter Property="Fill" Value="{DynamicResource StatusSuccess}"/></DataTrigger>
+                                                <DataTrigger Binding="{Binding StatusBannerType}" Value="Warning"><Setter Property="Fill" Value="{DynamicResource StatusWarning}"/></DataTrigger>
+                                                <DataTrigger Binding="{Binding StatusBannerType}" Value="Error"><Setter Property="Fill" Value="{DynamicResource StatusError}"/></DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Ellipse.Style>
+                                </Ellipse>
+                                <TextBlock Text="{Binding StatusBannerMessage}" FontSize="13" Foreground="{DynamicResource TextPrimary}" TextWrapping="Wrap" MaxWidth="600" VerticalAlignment="Center"/>
+                                <Button Style="{StaticResource GhostButtonStyle}" Command="{Binding DismissBannerCommand}" Content="✕" ToolTip="Dismiss" Margin="12,0,0,0" Foreground="{DynamicResource TextSecondary}" Cursor="Hand"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+
+            </Grid>
+
+            <ctrl:StatusBar Grid.Row="2"/>
+        </Grid>
+    </Border>
+</Window>

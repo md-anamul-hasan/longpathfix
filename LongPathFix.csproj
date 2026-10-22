@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <DefaultItemExcludes>$(DefaultItemExcludes);LongPathFix.Tests\**</DefaultItemExcludes>
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+    <AssemblyName>LongPathFix</AssemblyName>
+    <Product>LongPathFix</Product>
+    <Company>Md Anamul Hasan</Company>
+    <Copyright>Copyright (c) 2026 Md Anamul Hasan</Copyright>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\icon.ico" />
+    <Resource Include="Assets\logo.png" />
+  </ItemGroup>
+
+</Project>
