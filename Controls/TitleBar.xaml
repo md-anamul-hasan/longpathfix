@@ -82,14 +82,14 @@
             </StackPanel>
 
             <StackPanel Grid.Column="1" Orientation="Horizontal" WindowChrome.IsHitTestVisibleInChrome="True">
-                <Button Style="{StaticResource CaptionButtonStyle}" ToolTip="Minimize" Click="MinimizeButton_Click">
+                <Button Style="{StaticResource CaptionButtonStyle}" ToolTip="Minimize" Click="MinimizeButton_Click" AutomationProperties.Name="Minimize">
                     <Path Width="10" Height="1" Data="M 0,0 L 10,0" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1" SnapsToDevicePixels="True"/>
                 </Button>
-                <Button x:Name="MaximizeButton" Style="{StaticResource CaptionButtonStyle}" ToolTip="Maximize" Click="MaximizeButton_Click">
+                <Button x:Name="MaximizeButton" Style="{StaticResource CaptionButtonStyle}" ToolTip="Maximize" Click="MaximizeButton_Click" AutomationProperties.Name="Maximize">
                     <Path x:Name="MaximizePath" Width="10" Height="10" Data="M 0.5,0.5 H 9.5 V 9.5 H 0.5 Z"
                           Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1" SnapsToDevicePixels="True"/>
                 </Button>
-                <Button Style="{StaticResource CloseButtonStyle}" ToolTip="Close" Click="CloseButton_Click">
+                <Button Style="{StaticResource CloseButtonStyle}" ToolTip="Close" Click="CloseButton_Click" AutomationProperties.Name="Close">
                     <Path Width="10" Height="10" Data="M 0,0 L 10,10 M 10,0 L 0,10" Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" StrokeThickness="1" SnapsToDevicePixels="True"/>
                 </Button>
             </StackPanel>

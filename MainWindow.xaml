@@ -136,7 +136,7 @@
                         <StackPanel Grid.Row="1">
                             <theme:ThemeToggleButton Margin="0,0,0,6"/>
                         <!-- Open source link -->
-                        <Button Command="{Binding OpenRepositoryCommand}" Cursor="Hand" HorizontalContentAlignment="Stretch" ToolTip="Open the project on GitHub">
+                        <Button Command="{Binding OpenRepositoryCommand}" Cursor="Hand" HorizontalContentAlignment="Stretch" ToolTip="Open the project on GitHub" AutomationProperties.Name="Open the project on GitHub">
                             <Button.Template>
                                 <ControlTemplate TargetType="Button">
                                     <Border x:Name="Bg" Background="Transparent" CornerRadius="8" Padding="10,8">
@@ -306,7 +306,7 @@
                                     </Ellipse.Style>
                                 </Ellipse>
                                 <TextBlock Text="{Binding StatusBannerMessage}" FontSize="13" Foreground="{DynamicResource TextPrimary}" TextWrapping="Wrap" MaxWidth="600" VerticalAlignment="Center"/>
-                                <Button Style="{StaticResource GhostButtonStyle}" Command="{Binding DismissBannerCommand}" Content="✕" ToolTip="Dismiss" Margin="12,0,0,0" Foreground="{DynamicResource TextSecondary}" Cursor="Hand"/>
+                                <Button Style="{StaticResource GhostButtonStyle}" Command="{Binding DismissBannerCommand}" Content="✕" ToolTip="Dismiss" Margin="12,0,0,0" Foreground="{DynamicResource TextSecondary}" Cursor="Hand" AutomationProperties.Name="Dismiss"/>
                             </StackPanel>
                         </Border>
                     </Grid>
