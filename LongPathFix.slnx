@@ -1,4 +1,0 @@
-<Solution>
-  <Project Path="LongPathFix.csproj" />
-  <Project Path="LongPathFix.Tests/LongPathFix.Tests.csproj" />
-</Solution>

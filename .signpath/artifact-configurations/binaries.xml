@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- LongPathFix's own executable; the .NET runtime bundled in it is third-party and is not signed by us. -->
+<!-- LongPathFix native Rust + Tauri standalone Windows executable. -->
 <artifact-configuration xmlns="http://signpath.io/artifact-configuration/v1">
   <zip-file>
     <pe-file-set>

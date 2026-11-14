@@ -1,0 +1,906 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T08:35:01.880Z",
+  "title": "Design System: LongPathFix",
+  "extensions": {
+    "colorMeta": {
+      "cobalt-accent": {
+        "role": "primary",
+        "displayName": "Cobalt Accent",
+        "description": "Dark primary affirmative buttons, selection fill, active checkboxes, and progress track fill.",
+        "tonalRamp": [
+          "oklch(15% 0.089 259)",
+          "oklch(26% 0.143 259)",
+          "oklch(38% 0.183 259)",
+          "oklch(50% 0.199 259)",
+          "oklch(62% 0.189 259)",
+          "oklch(74% 0.159 259)",
+          "oklch(85% 0.109 259)",
+          "oklch(95% 0.056 259)"
+        ]
+      },
+      "cobalt-accent-hover": {
+        "role": "primary",
+        "displayName": "Cobalt Accent Hover",
+        "description": "Dark hover fill for primary CTA buttons.",
+        "tonalRamp": [
+          "oklch(15% 0.083 259)",
+          "oklch(26% 0.133 259)",
+          "oklch(38% 0.17 259)",
+          "oklch(50% 0.184 259)",
+          "oklch(62% 0.175 259)",
+          "oklch(74% 0.147 259)",
+          "oklch(85% 0.101 259)",
+          "oklch(95% 0.052 259)"
+        ]
+      },
+      "sky-accent-text": {
+        "role": "primary",
+        "displayName": "Sky Accent Text",
+        "description": "Dark accessible accent ink on neutral surfaces (folder glyphs, active filter pills, PathGauge threshold).",
+        "tonalRamp": [
+          "oklch(15% 0.058 254)",
+          "oklch(26% 0.094 254)",
+          "oklch(38% 0.119 254)",
+          "oklch(50% 0.13 254)",
+          "oklch(62% 0.123 254)",
+          "oklch(74% 0.104 254)",
+          "oklch(85% 0.071 254)",
+          "oklch(95% 0.036 254)"
+        ]
+      },
+      "focus-sky": {
+        "role": "primary",
+        "displayName": "Focus Sky",
+        "description": "Dark global :focus-visible outline color (8.15:1 on surface).",
+        "tonalRamp": [
+          "oklch(15% 0.054 253)",
+          "oklch(26% 0.087 253)",
+          "oklch(38% 0.111 253)",
+          "oklch(50% 0.121 253)",
+          "oklch(62% 0.115 253)",
+          "oklch(74% 0.097 253)",
+          "oklch(85% 0.067 253)",
+          "oklch(95% 0.034 253)"
+        ]
+      },
+      "cobalt-light": {
+        "role": "primary",
+        "displayName": "Cobalt Light",
+        "description": "Light primary affirmative buttons, selection fill, active checkboxes, and progress fill.",
+        "tonalRamp": [
+          "oklch(15% 0.087 259)",
+          "oklch(26% 0.139 259)",
+          "oklch(38% 0.178 259)",
+          "oklch(50% 0.193 259)",
+          "oklch(62% 0.184 259)",
+          "oklch(74% 0.155 259)",
+          "oklch(85% 0.106 259)",
+          "oklch(95% 0.054 259)"
+        ]
+      },
+      "cobalt-light-hover": {
+        "role": "primary",
+        "displayName": "Cobalt Light Hover",
+        "description": "Light primary CTA hover, accent ink, and :focus-visible outline ring.",
+        "tonalRamp": [
+          "oklch(15% 0.077 259)",
+          "oklch(26% 0.123 259)",
+          "oklch(38% 0.158 259)",
+          "oklch(50% 0.171 259)",
+          "oklch(62% 0.163 259)",
+          "oklch(74% 0.137 259)",
+          "oklch(85% 0.094 259)",
+          "oklch(95% 0.048 259)"
+        ]
+      },
+      "emerald-ok": {
+        "role": "semantic",
+        "displayName": "Emerald Ok",
+        "description": "Dark LongPathsEnabled active status dot in navigation rail.",
+        "tonalRamp": [
+          "oklch(15% 0.065 152)",
+          "oklch(26% 0.104 152)",
+          "oklch(38% 0.134 152)",
+          "oklch(50% 0.145 152)",
+          "oklch(62% 0.138 152)",
+          "oklch(74% 0.116 152)",
+          "oklch(85% 0.08 152)",
+          "oklch(95% 0.041 152)"
+        ]
+      },
+      "mint-ok-text": {
+        "role": "semantic",
+        "displayName": "Mint Ok Text",
+        "description": "Dark positive KPIs, valid filename checks, and planned rename pills.",
+        "tonalRamp": [
+          "oklch(15% 0.066 155)",
+          "oklch(26% 0.106 155)",
+          "oklch(38% 0.136 155)",
+          "oklch(50% 0.148 155)",
+          "oklch(62% 0.14 155)",
+          "oklch(74% 0.118 155)",
+          "oklch(85% 0.081 155)",
+          "oklch(95% 0.041 155)"
+        ]
+      },
+      "forest-ok-light": {
+        "role": "semantic",
+        "displayName": "Forest Ok Light",
+        "description": "Light LongPathsEnabled active status dot.",
+        "tonalRamp": [
+          "oklch(15% 0.049 157)",
+          "oklch(26% 0.079 157)",
+          "oklch(38% 0.101 157)",
+          "oklch(50% 0.109 157)",
+          "oklch(62% 0.104 157)",
+          "oklch(74% 0.088 157)",
+          "oklch(85% 0.06 157)",
+          "oklch(95% 0.031 157)"
+        ]
+      },
+      "pine-ok-text-light": {
+        "role": "semantic",
+        "displayName": "Pine Ok Text Light",
+        "description": "Light positive KPIs, valid filename checks, and planned rename pills.",
+        "tonalRamp": [
+          "oklch(15% 0.042 157)",
+          "oklch(26% 0.067 157)",
+          "oklch(38% 0.086 157)",
+          "oklch(50% 0.094 157)",
+          "oklch(62% 0.089 157)",
+          "oklch(74% 0.075 157)",
+          "oklch(85% 0.051 157)",
+          "oklch(95% 0.026 157)"
+        ]
+      },
+      "amber-warn": {
+        "role": "semantic",
+        "displayName": "Amber Warn",
+        "description": "Dark warning dot for LongPathsEnabled off state.",
+        "tonalRamp": [
+          "oklch(15% 0.064 69)",
+          "oklch(26% 0.103 69)",
+          "oklch(38% 0.132 69)",
+          "oklch(50% 0.143 69)",
+          "oklch(62% 0.136 69)",
+          "oklch(74% 0.115 69)",
+          "oklch(85% 0.079 69)",
+          "oklch(95% 0.04 69)"
+        ]
+      },
+      "gold-warn-text": {
+        "role": "semantic",
+        "displayName": "Gold Warn Text",
+        "description": "Dark over-limit warnings, manual-review pills, and read-only tags.",
+        "tonalRamp": [
+          "oklch(15% 0.057 80)",
+          "oklch(26% 0.092 80)",
+          "oklch(38% 0.117 80)",
+          "oklch(50% 0.128 80)",
+          "oklch(62% 0.121 80)",
+          "oklch(74% 0.102 80)",
+          "oklch(85% 0.07 80)",
+          "oklch(95% 0.036 80)"
+        ]
+      },
+      "ochre-warn-light": {
+        "role": "semantic",
+        "displayName": "Ochre Warn Light",
+        "description": "Light warning dot for LongPathsEnabled off state.",
+        "tonalRamp": [
+          "oklch(15% 0.054 65)",
+          "oklch(26% 0.086 65)",
+          "oklch(38% 0.11 65)",
+          "oklch(50% 0.119 65)",
+          "oklch(62% 0.113 65)",
+          "oklch(74% 0.095 65)",
+          "oklch(85% 0.065 65)",
+          "oklch(95% 0.033 65)"
+        ]
+      },
+      "bronze-warn-text-light": {
+        "role": "semantic",
+        "displayName": "Bronze Warn Text Light",
+        "description": "Light over-limit warnings and manual-review badge text.",
+        "tonalRamp": [
+          "oklch(15% 0.047 65)",
+          "oklch(26% 0.075 65)",
+          "oklch(38% 0.096 65)",
+          "oklch(50% 0.104 65)",
+          "oklch(62% 0.099 65)",
+          "oklch(74% 0.083 65)",
+          "oklch(85% 0.057 65)",
+          "oklch(95% 0.029 65)"
+        ]
+      },
+      "crimson-danger": {
+        "role": "semantic",
+        "displayName": "Crimson Danger",
+        "description": "Dark destructive hover fill and critical alert state.",
+        "tonalRamp": [
+          "oklch(15% 0.08 21)",
+          "oklch(26% 0.129 21)",
+          "oklch(38% 0.164 21)",
+          "oklch(50% 0.178 21)",
+          "oklch(62% 0.17 21)",
+          "oklch(74% 0.143 21)",
+          "oklch(85% 0.098 21)",
+          "oklch(95% 0.05 21)"
+        ]
+      },
+      "coral-danger-text": {
+        "role": "semantic",
+        "displayName": "Coral Danger Text",
+        "description": "Dark critical issue tags (reserved DOS names, illegal chars, >255 segment) and error ink.",
+        "tonalRamp": [
+          "oklch(15% 0.058 17)",
+          "oklch(26% 0.093 17)",
+          "oklch(38% 0.119 17)",
+          "oklch(50% 0.129 17)",
+          "oklch(62% 0.122 17)",
+          "oklch(74% 0.103 17)",
+          "oklch(85% 0.071 17)",
+          "oklch(95% 0.036 17)"
+        ]
+      },
+      "brick-danger-light": {
+        "role": "semantic",
+        "displayName": "Brick Danger Light",
+        "description": "Light destructive hover fill and critical error indicator.",
+        "tonalRamp": [
+          "oklch(15% 0.084 29)",
+          "oklch(26% 0.135 29)",
+          "oklch(38% 0.173 29)",
+          "oklch(50% 0.188 29)",
+          "oklch(62% 0.178 29)",
+          "oklch(74% 0.15 29)",
+          "oklch(85% 0.103 29)",
+          "oklch(95% 0.053 29)"
+        ]
+      },
+      "garnet-danger-text-light": {
+        "role": "semantic",
+        "displayName": "Garnet Danger Text Light",
+        "description": "Light critical issue tags and error banner text.",
+        "tonalRamp": [
+          "oklch(15% 0.074 29)",
+          "oklch(26% 0.119 29)",
+          "oklch(38% 0.152 29)",
+          "oklch(50% 0.165 29)",
+          "oklch(62% 0.156 29)",
+          "oklch(74% 0.132 29)",
+          "oklch(85% 0.091 29)",
+          "oklch(95% 0.046 29)"
+        ]
+      },
+      "gauge-before": {
+        "role": "semantic",
+        "displayName": "Gauge Before",
+        "description": "Dark PathGauge pre-repair bar series (3.68:1 on track).",
+        "tonalRamp": [
+          "oklch(15% 0.063 18)",
+          "oklch(26% 0.101 18)",
+          "oklch(38% 0.129 18)",
+          "oklch(50% 0.14 18)",
+          "oklch(62% 0.133 18)",
+          "oklch(74% 0.112 18)",
+          "oklch(85% 0.077 18)",
+          "oklch(95% 0.039 18)"
+        ]
+      },
+      "gauge-after": {
+        "role": "semantic",
+        "displayName": "Gauge After",
+        "description": "Dark PathGauge post-plan bar series (4.72:1 on track).",
+        "tonalRamp": [
+          "oklch(15% 0.059 154)",
+          "oklch(26% 0.094 154)",
+          "oklch(38% 0.121 154)",
+          "oklch(50% 0.131 154)",
+          "oklch(62% 0.125 154)",
+          "oklch(74% 0.105 154)",
+          "oklch(85% 0.072 154)",
+          "oklch(95% 0.037 154)"
+        ]
+      },
+      "gauge-before-light": {
+        "role": "semantic",
+        "displayName": "Gauge Before Light",
+        "description": "Light PathGauge pre-repair bar series (3.80:1 on track).",
+        "tonalRamp": [
+          "oklch(15% 0.073 21)",
+          "oklch(26% 0.117 21)",
+          "oklch(38% 0.15 21)",
+          "oklch(50% 0.163 21)",
+          "oklch(62% 0.155 21)",
+          "oklch(74% 0.13 21)",
+          "oklch(85% 0.09 21)",
+          "oklch(95% 0.046 21)"
+        ]
+      },
+      "gauge-after-light": {
+        "role": "semantic",
+        "displayName": "Gauge After Light",
+        "description": "Light PathGauge post-plan bar series (3.55:1 on track).",
+        "tonalRamp": [
+          "oklch(15% 0.056 156)",
+          "oklch(26% 0.09 156)",
+          "oklch(38% 0.115 156)",
+          "oklch(50% 0.125 156)",
+          "oklch(62% 0.119 156)",
+          "oklch(74% 0.1 156)",
+          "oklch(85% 0.069 156)",
+          "oklch(95% 0.035 156)"
+        ]
+      },
+      "obsidian-canvas": {
+        "role": "neutral",
+        "displayName": "Obsidian Canvas",
+        "description": "Dark viewport root canvas behind the navigation rail and main workspace.",
+        "tonalRamp": [
+          "oklch(15% 0.004 264)",
+          "oklch(26% 0.006 264)",
+          "oklch(38% 0.008 264)",
+          "oklch(50% 0.009 264)",
+          "oklch(62% 0.008 264)",
+          "oklch(74% 0.007 264)",
+          "oklch(85% 0.005 264)",
+          "oklch(95% 0.002 264)"
+        ]
+      },
+      "slate-inset": {
+        "role": "neutral",
+        "displayName": "Slate Inset",
+        "description": "Dark recessed input fields, segmented control track, and copyable path wells.",
+        "tonalRamp": [
+          "oklch(15% 0.006 264)",
+          "oklch(26% 0.009 264)",
+          "oklch(38% 0.012 264)",
+          "oklch(50% 0.013 264)",
+          "oklch(62% 0.012 264)",
+          "oklch(74% 0.01 264)",
+          "oklch(85% 0.007 264)",
+          "oklch(95% 0.004 264)"
+        ]
+      },
+      "graphite-rail": {
+        "role": "neutral",
+        "displayName": "Graphite Rail",
+        "description": "Dark 224px persistent navigation rail surface.",
+        "tonalRamp": [
+          "oklch(15% 0.006 264)",
+          "oklch(26% 0.009 264)",
+          "oklch(38% 0.012 264)",
+          "oklch(50% 0.013 264)",
+          "oklch(62% 0.012 264)",
+          "oklch(74% 0.01 264)",
+          "oklch(85% 0.007 264)",
+          "oklch(95% 0.004 264)"
+        ]
+      },
+      "charcoal-surface": {
+        "role": "neutral",
+        "displayName": "Charcoal Surface",
+        "description": "Dark primary cards, findings table shell, history items, and modal panels.",
+        "tonalRamp": [
+          "oklch(15% 0.007 262)",
+          "oklch(26% 0.011 262)",
+          "oklch(38% 0.014 262)",
+          "oklch(50% 0.015 262)",
+          "oklch(62% 0.014 262)",
+          "oklch(74% 0.012 262)",
+          "oklch(85% 0.008 262)",
+          "oklch(95% 0.004 262)"
+        ]
+      },
+      "steel-elevated": {
+        "role": "neutral",
+        "displayName": "Steel Elevated",
+        "description": "Dark sticky table headers, PathInspectorDrawer, secondary buttons, and table footer.",
+        "tonalRamp": [
+          "oklch(15% 0.009 264)",
+          "oklch(26% 0.015 264)",
+          "oklch(38% 0.019 264)",
+          "oklch(50% 0.02 264)",
+          "oklch(62% 0.019 264)",
+          "oklch(74% 0.016 264)",
+          "oklch(85% 0.011 264)",
+          "oklch(95% 0.006 264)"
+        ]
+      },
+      "slate-hover": {
+        "role": "neutral",
+        "displayName": "Slate Hover",
+        "description": "Dark hover state across nav items, table rows, buttons, and recent-root items.",
+        "tonalRamp": [
+          "oklch(15% 0.01 263)",
+          "oklch(26% 0.016 263)",
+          "oklch(38% 0.02 263)",
+          "oklch(50% 0.022 263)",
+          "oklch(62% 0.021 263)",
+          "oklch(74% 0.018 263)",
+          "oklch(85% 0.012 263)",
+          "oklch(95% 0.006 263)"
+        ]
+      },
+      "gauge-track-dark": {
+        "role": "neutral",
+        "displayName": "Gauge Track Dark",
+        "description": "Dark PathGauge histogram slot and progress track background.",
+        "tonalRamp": [
+          "oklch(15% 0.009 264)",
+          "oklch(26% 0.014 264)",
+          "oklch(38% 0.018 264)",
+          "oklch(50% 0.02 264)",
+          "oklch(62% 0.019 264)",
+          "oklch(74% 0.016 264)",
+          "oklch(85% 0.011 264)",
+          "oklch(95% 0.006 264)"
+        ]
+      },
+      "hairline-dark": {
+        "role": "neutral",
+        "displayName": "Hairline Dark",
+        "description": "Dark 1px structural divider on panels, table rows, and drawer edges.",
+        "tonalRamp": [
+          "oklch(15% 0.01 263)",
+          "oklch(26% 0.016 263)",
+          "oklch(38% 0.02 263)",
+          "oklch(50% 0.022 263)",
+          "oklch(62% 0.021 263)",
+          "oklch(74% 0.017 263)",
+          "oklch(85% 0.012 263)",
+          "oklch(95% 0.006 263)"
+        ]
+      },
+      "hairline-strong-dark": {
+        "role": "neutral",
+        "displayName": "Hairline Strong Dark",
+        "description": "Dark interactive input/button borders, sticky header rule, and active nav border.",
+        "tonalRamp": [
+          "oklch(15% 0.013 262)",
+          "oklch(26% 0.022 262)",
+          "oklch(38% 0.028 262)",
+          "oklch(50% 0.03 262)",
+          "oklch(62% 0.028 262)",
+          "oklch(74% 0.024 262)",
+          "oklch(85% 0.016 262)",
+          "oklch(95% 0.008 262)"
+        ]
+      },
+      "frost-ink": {
+        "role": "neutral",
+        "displayName": "Frost Ink",
+        "description": "Dark primary headings, body copy, and monospace path text (15.19:1 on surface).",
+        "tonalRamp": [
+          "oklch(15% 0.003 255)",
+          "oklch(26% 0.004 255)",
+          "oklch(38% 0.006 255)",
+          "oklch(50% 0.006 255)",
+          "oklch(62% 0.006 255)",
+          "oklch(74% 0.005 255)",
+          "oklch(85% 0.003 255)",
+          "oklch(95% 0.002 255)"
+        ]
+      },
+      "pewter-ink": {
+        "role": "neutral",
+        "displayName": "Pewter Ink",
+        "description": "Dark secondary labels, view subtitles, nav links, and table headers (7.89:1 on surface).",
+        "tonalRamp": [
+          "oklch(15% 0.011 258)",
+          "oklch(26% 0.017 258)",
+          "oklch(38% 0.022 258)",
+          "oklch(50% 0.024 258)",
+          "oklch(62% 0.023 258)",
+          "oklch(74% 0.019 258)",
+          "oklch(85% 0.013 258)",
+          "oklch(95% 0.007 258)"
+        ]
+      },
+      "ash-ink": {
+        "role": "neutral",
+        "displayName": "Ash Ink",
+        "description": "Dark muted captions, placeholders, and metric units (5.23:1 on surface).",
+        "tonalRamp": [
+          "oklch(15% 0.014 260)",
+          "oklch(26% 0.023 260)",
+          "oklch(38% 0.029 260)",
+          "oklch(50% 0.032 260)",
+          "oklch(62% 0.03 260)",
+          "oklch(74% 0.025 260)",
+          "oklch(85% 0.017 260)",
+          "oklch(95% 0.009 260)"
+        ]
+      },
+      "porcelain-canvas": {
+        "role": "neutral",
+        "displayName": "Porcelain Canvas",
+        "description": "Light viewport root canvas.",
+        "tonalRamp": [
+          "oklch(15% 0.002 258)",
+          "oklch(26% 0.003 258)",
+          "oklch(38% 0.004 258)",
+          "oklch(50% 0.005 258)",
+          "oklch(62% 0.004 258)",
+          "oklch(74% 0.004 258)",
+          "oklch(85% 0.002 258)",
+          "oklch(95% 0.001 258)"
+        ]
+      },
+      "mist-rail": {
+        "role": "neutral",
+        "displayName": "Mist Rail",
+        "description": "Light 224px persistent navigation rail surface.",
+        "tonalRamp": [
+          "oklch(15% 0.003 261)",
+          "oklch(26% 0.005 261)",
+          "oklch(38% 0.007 261)",
+          "oklch(50% 0.007 261)",
+          "oklch(62% 0.007 261)",
+          "oklch(74% 0.006 261)",
+          "oklch(85% 0.004 261)",
+          "oklch(95% 0.002 261)"
+        ]
+      },
+      "pure-surface": {
+        "role": "neutral",
+        "displayName": "Pure Surface",
+        "description": "Light primary card/modal surface and universal white ink on solid accent CTAs.",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(38% 0 0)",
+          "oklch(50% 0 0)",
+          "oklch(62% 0 0)",
+          "oklch(74% 0 0)",
+          "oklch(85% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "cloud-elevated": {
+        "role": "neutral",
+        "displayName": "Cloud Elevated",
+        "description": "Light sticky table headers, PathInspectorDrawer, and secondary buttons.",
+        "tonalRamp": [
+          "oklch(15% 0.001 265)",
+          "oklch(26% 0.002 265)",
+          "oklch(38% 0.003 265)",
+          "oklch(50% 0.003 265)",
+          "oklch(62% 0.003 265)",
+          "oklch(74% 0.002 265)",
+          "oklch(85% 0.002 265)",
+          "oklch(95% 0.001 265)"
+        ]
+      },
+      "fog-inset": {
+        "role": "neutral",
+        "displayName": "Fog Inset",
+        "description": "Light recessed input fields, segmented control track, and code wells.",
+        "tonalRamp": [
+          "oklch(15% 0.003 265)",
+          "oklch(26% 0.004 265)",
+          "oklch(38% 0.005 265)",
+          "oklch(50% 0.006 265)",
+          "oklch(62% 0.005 265)",
+          "oklch(74% 0.005 265)",
+          "oklch(85% 0.003 265)",
+          "oklch(95% 0.002 265)"
+        ]
+      },
+      "vapor-hover": {
+        "role": "neutral",
+        "displayName": "Vapor Hover",
+        "description": "Light interactive hover surface.",
+        "tonalRamp": [
+          "oklch(15% 0.005 262)",
+          "oklch(26% 0.007 262)",
+          "oklch(38% 0.01 262)",
+          "oklch(50% 0.01 262)",
+          "oklch(62% 0.01 262)",
+          "oklch(74% 0.008 262)",
+          "oklch(85% 0.006 262)",
+          "oklch(95% 0.003 262)"
+        ]
+      },
+      "gauge-track-light": {
+        "role": "neutral",
+        "displayName": "Gauge Track Light",
+        "description": "Light PathGauge histogram slot and progress track background.",
+        "tonalRamp": [
+          "oklch(15% 0.005 262)",
+          "oklch(26% 0.007 262)",
+          "oklch(38% 0.01 262)",
+          "oklch(50% 0.01 262)",
+          "oklch(62% 0.01 262)",
+          "oklch(74% 0.008 262)",
+          "oklch(85% 0.006 262)",
+          "oklch(95% 0.003 262)"
+        ]
+      },
+      "hairline-light": {
+        "role": "neutral",
+        "displayName": "Hairline Light",
+        "description": "Light 1px structural border.",
+        "tonalRamp": [
+          "oklch(15% 0.006 258)",
+          "oklch(26% 0.01 258)",
+          "oklch(38% 0.013 258)",
+          "oklch(50% 0.014 258)",
+          "oklch(62% 0.013 258)",
+          "oklch(74% 0.011 258)",
+          "oklch(85% 0.008 258)",
+          "oklch(95% 0.004 258)"
+        ]
+      },
+      "hairline-strong-light": {
+        "role": "neutral",
+        "displayName": "Hairline Strong Light",
+        "description": "Light interactive control stroke and sticky header rule.",
+        "tonalRamp": [
+          "oklch(15% 0.011 258)",
+          "oklch(26% 0.017 258)",
+          "oklch(38% 0.022 258)",
+          "oklch(50% 0.024 258)",
+          "oklch(62% 0.023 258)",
+          "oklch(74% 0.019 258)",
+          "oklch(85% 0.013 258)",
+          "oklch(95% 0.007 258)"
+        ]
+      },
+      "ink-charcoal": {
+        "role": "neutral",
+        "displayName": "Ink Charcoal",
+        "description": "Light primary headings, body copy, and path text (17.74:1 on surface).",
+        "tonalRamp": [
+          "oklch(15% 0.014 265)",
+          "oklch(26% 0.023 265)",
+          "oklch(38% 0.029 265)",
+          "oklch(50% 0.032 265)",
+          "oklch(62% 0.03 265)",
+          "oklch(74% 0.025 265)",
+          "oklch(85% 0.017 265)",
+          "oklch(95% 0.009 265)"
+        ]
+      },
+      "slate-ink-secondary": {
+        "role": "neutral",
+        "displayName": "Slate Ink Secondary",
+        "description": "Light secondary labels, subtitles, and table headers (8.21:1 on surface).",
+        "tonalRamp": [
+          "oklch(15% 0.015 255)",
+          "oklch(26% 0.024 255)",
+          "oklch(38% 0.03 255)",
+          "oklch(50% 0.033 255)",
+          "oklch(62% 0.031 255)",
+          "oklch(74% 0.026 255)",
+          "oklch(85% 0.018 255)",
+          "oklch(95% 0.009 255)"
+        ]
+      },
+      "slate-ink-muted": {
+        "role": "neutral",
+        "displayName": "Slate Ink Muted",
+        "description": "Light muted captions, placeholders, and metric units (5.90:1 on surface).",
+        "tonalRamp": [
+          "oklch(15% 0.016 261)",
+          "oklch(26% 0.025 261)",
+          "oklch(38% 0.032 261)",
+          "oklch(50% 0.035 261)",
+          "oklch(62% 0.033 261)",
+          "oklch(74% 0.028 261)",
+          "oklch(85% 0.019 261)",
+          "oklch(95% 0.01 261)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Primary view headings (h1.view-title)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Modal titles (h2.modal-title) and 15px sidebar wordmark."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings inside cards and PathInspectorDrawer title."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default interface text, banners, and explanatory documentation."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Control labels, compact buttons, filter pills, and sticky table headers."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Status tags, key-value labels, PathGauge bucket ranges, nav badges, and keycaps."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Paths, UTF-16 counts, tabular metrics, batch IDs, and keyboard shortcut badges."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-modal",
+        "value": "0 20px 56px rgba(0, 0, 0, 0.55)",
+        "purpose": "Floating RepairPreviewModal dialog and <=1360px overlay PathInspectorDrawer (light theme: 0 20px 52px rgba(17, 24, 39, 0.20))."
+      },
+      {
+        "name": "shadow-popover",
+        "value": "0 10px 28px rgba(0, 0, 0, 0.42)",
+        "purpose": "Floating Recent Roots menu dropdown above scan controls (light theme: 0 10px 26px rgba(17, 24, 39, 0.12))."
+      }
+    ],
+    "motion": [
+      {
+        "name": "transition-fast",
+        "value": "120ms cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "purpose": "State transitions on buttons, nav items, policy pill, filter pills, segmented toggles, and table rows."
+      },
+      {
+        "name": "gauge-bar-ease",
+        "value": "height 180ms ease",
+        "purpose": "Smooth bar height interpolation on PathGauge before/after histogram updates."
+      },
+      {
+        "name": "progress-fill-linear",
+        "value": "width 150ms linear",
+        "purpose": "Determinate repair progress bar fill."
+      },
+      {
+        "name": "progress-slide",
+        "value": "1.1s ease-in-out infinite",
+        "purpose": "Indeterminate scan progress sweep collapsed to 0.01ms under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "drawer-overlay",
+        "value": "1360px"
+      },
+      {
+        "name": "single-column",
+        "value": "1080px"
+      },
+      {
+        "name": "compact-shell",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary affirmative action for initiating folder scans, previewing repairs, applying safe renames, and undoing batches.",
+      "html": "<button type=\"button\" class=\"ds-btn ds-btn-primary\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v3\"/><path d=\"M3 10v8a2 2 0 0 0 2 2h6\"/><circle cx=\"16.5\" cy=\"16.5\" r=\"3.5\"/><path d=\"M19 19l2.5 2.5\"/></svg>Scan Folder</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; height: 34px; padding: 0 13px; border-radius: var(--radius-sm, 6px); border: 1px solid var(--border-strong, #394252); background: var(--bg-elevated, #20252f); color: var(--text-primary, #f0f3f7); font-family: var(--font-sans, \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif); font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: background 120ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 120ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-btn:focus-visible { outline: 2px solid var(--focus-ring, #7ab8ff); outline-offset: 2px; } .ds-btn-primary { background: var(--accent, #1d6fe8); border-color: var(--accent, #1d6fe8); color: var(--accent-fg, #ffffff); font-weight: 600; } .ds-btn-primary:hover:not(:disabled) { background: var(--accent-hover, #1761cf); border-color: var(--accent-hover, #1761cf); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Default neutral action for folder browsing, recent roots, CSV export, and modal cancel actions.",
+      "html": "<button type=\"button\" class=\"ds-btn\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3v12\"/><path d=\"M7 10l5 5 5-5\"/><path d=\"M4 20h16\"/></svg>Export CSV</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; height: 34px; padding: 0 13px; border-radius: var(--radius-sm, 6px); border: 1px solid var(--border-strong, #394252); background: var(--bg-elevated, #20252f); color: var(--text-primary, #f0f3f7); font-family: var(--font-sans, \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif); font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: background 120ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 120ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-btn:hover:not(:disabled) { background: var(--bg-hover, #252b36); } .ds-btn:focus-visible { outline: 2px solid var(--focus-ring, #7ab8ff); outline-offset: 2px; }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Cancellation and destructive confirmation action such as Cancel Scan or Confirm Remove.",
+      "html": "<div class=\"ds-stage\"><button type=\"button\" class=\"ds-btn ds-btn-danger\">Cancel Scan</button></div>",
+      "css": ".ds-stage { display: inline-flex; padding: 8px 10px; border-radius: var(--radius-md, 8px); background: var(--bg-surface, #191d24); } .ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; height: 34px; padding: 0 13px; border-radius: var(--radius-sm, 6px); border: 1px solid var(--danger-border, rgba(255, 148, 154, 0.35)); background: var(--danger-tint, rgba(217, 74, 83, 0.14)); color: var(--danger-text, #ff949a); font-family: var(--font-sans, \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif); font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background 120ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 120ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-btn-danger:hover:not(:disabled) { background: var(--danger, #d94a53); border-color: var(--danger, #d94a53); color: #ffffff; } .ds-btn:focus-visible { outline: 2px solid var(--focus-ring, #7ab8ff); outline-offset: 2px; }"
+    },
+    {
+      "name": "Path & Search Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Recessed monospace path input paired with segmented UTF-16 limit presets.",
+      "html": "<div class=\"ds-field-stack\"><input type=\"text\" class=\"ds-input\" aria-label=\"Target folder path\" value=\"D:\\Archives\\nas-sync-2026\" /><div class=\"ds-seg-control\" role=\"group\" aria-label=\"Path length threshold presets\"><button type=\"button\" class=\"ds-seg-btn active\" aria-pressed=\"true\">259</button><button type=\"button\" class=\"ds-seg-btn\" aria-pressed=\"false\">240</button><button type=\"button\" class=\"ds-seg-btn\" aria-pressed=\"false\">200</button><button type=\"button\" class=\"ds-seg-btn\" aria-pressed=\"false\">Custom</button></div></div>",
+      "css": ".ds-field-stack { display: flex; flex-direction: column; gap: 10px; width: 320px; padding: 12px; border-radius: var(--radius-lg, 10px); background: var(--bg-surface, #191d24); border: 1px solid var(--border, #282e39); } .ds-input { height: 34px; padding: 0 11px; border-radius: var(--radius-sm, 6px); border: 1px solid var(--border-strong, #394252); background: var(--bg-inset, #13161c); color: var(--text-primary, #f0f3f7); font-family: var(--font-mono, \"Cascadia Mono\", \"Consolas\", monospace); font-size: 12.5px; } .ds-input:hover:not(:disabled) { border-color: var(--text-muted, #8490a3); } .ds-input:focus-visible { outline: 2px solid var(--focus-ring, #7ab8ff); outline-offset: 2px; } .ds-seg-control { display: inline-flex; align-self: flex-start; padding: 2px; border-radius: var(--radius-sm, 6px); background: var(--bg-inset, #13161c); border: 1px solid var(--border, #282e39); gap: 2px; } .ds-seg-btn { height: 26px; padding: 0 9px; border: none; border-radius: 4px; background: transparent; color: var(--text-secondary, #a8b2c1); font-family: var(--font-mono, \"Cascadia Mono\", monospace); font-variant-numeric: tabular-nums; font-size: 12px; cursor: pointer; transition: background 120ms cubic-bezier(0.2, 0.8, 0.2, 1), color 120ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-seg-btn:hover { color: var(--text-primary, #f0f3f7); } .ds-seg-btn.active { background: var(--bg-surface, #191d24); color: var(--text-primary, #f0f3f7); font-weight: 600; }"
+    },
+    {
+      "name": "Navigation Rail",
+      "kind": "nav",
+      "refersTo": "nav-item",
+      "description": "Persistent 224px left rail navigation with active page outline, tabular count badges, and policy indicator.",
+      "html": "<nav class=\"ds-rail\" aria-label=\"Primary sections\"><button type=\"button\" class=\"ds-nav-item active\" aria-current=\"page\"><span class=\"ds-nav-main\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v3\"/><path d=\"M3 10v8a2 2 0 0 0 2 2h6\"/><circle cx=\"16.5\" cy=\"16.5\" r=\"3.5\"/><path d=\"M19 19l2.5 2.5\"/></svg><span>Scan &amp; Fix</span></span><span class=\"ds-nav-badge\">42</span></button><button type=\"button\" class=\"ds-nav-item\"><span class=\"ds-nav-main\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 12a9 9 0 1 0 3-6.7L3 8\"/><path d=\"M3 3v5h5\"/><path d=\"M12 7v5l3 2\"/></svg><span>History &amp; Undo</span></span><span class=\"ds-nav-badge\">3</span></button></nav>",
+      "css": ".ds-rail { width: 224px; display: flex; flex-direction: column; gap: 3px; padding: 12px; border-radius: var(--radius-lg, 10px); background: var(--bg-rail, #15181e); border: 1px solid var(--border, #282e39); } .ds-nav-item { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; padding: 9px 10px; border-radius: var(--radius-md, 8px); border: 1px solid transparent; background: transparent; color: var(--text-secondary, #a8b2c1); font-family: var(--font-sans, \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif); font-size: 13.5px; font-weight: 500; cursor: pointer; text-align: left; transition: background 120ms cubic-bezier(0.2, 0.8, 0.2, 1), color 120ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 120ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-nav-item:hover { background: var(--bg-hover, #252b36); color: var(--text-primary, #f0f3f7); } .ds-nav-item.active { background: var(--bg-surface, #191d24); border-color: var(--border-strong, #394252); color: var(--text-primary, #f0f3f7); font-weight: 600; } .ds-nav-item:focus-visible { outline: 2px solid var(--focus-ring, #7ab8ff); outline-offset: 2px; } .ds-nav-main { display: flex; align-items: center; gap: 9px; } .ds-nav-badge { font-family: var(--font-mono, \"Cascadia Mono\", monospace); font-variant-numeric: tabular-nums; font-size: 11px; padding: 1px 6px; border-radius: var(--radius-pill, 999px); background: var(--bg-elevated, #20252f); border: 1px solid var(--border, #282e39); color: var(--text-secondary, #a8b2c1); }"
+    },
+    {
+      "name": "Issue Filter Pills",
+      "kind": "chip",
+      "refersTo": "filter-pill",
+      "description": "Interactive issue-category filters with tabular counts and warn/danger severity border tints.",
+      "html": "<div class=\"ds-pill-tray\" role=\"group\" aria-label=\"Filter findings\"><button type=\"button\" class=\"ds-filter-pill active\" aria-pressed=\"true\"><span>All findings</span><span class=\"ds-mono\">42</span></button><button type=\"button\" class=\"ds-filter-pill tone-warn\" aria-pressed=\"false\"><span>Path &gt; limit</span><span class=\"ds-mono\">29</span></button><button type=\"button\" class=\"ds-filter-pill tone-danger\" aria-pressed=\"false\"><span>Reserved device</span><span class=\"ds-mono\">4</span></button></div>",
+      "css": ".ds-pill-tray { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 12px; border-radius: var(--radius-lg, 10px); background: var(--bg-surface, #191d24); border: 1px solid var(--border, #282e39); } .ds-filter-pill { display: inline-flex; align-items: center; gap: 5px; height: 26px; padding: 0 9px; border-radius: var(--radius-pill, 999px); border: 1px solid var(--border, #282e39); background: var(--bg-elevated, #20252f); color: var(--text-secondary, #a8b2c1); font-family: var(--font-sans, \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif); font-size: 12px; cursor: pointer; transition: background 120ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 120ms cubic-bezier(0.2, 0.8, 0.2, 1), color 120ms cubic-bezier(0.2, 0.8, 0.2, 1); } .ds-filter-pill:hover { border-color: var(--border-strong, #394252); color: var(--text-primary, #f0f3f7); } .ds-filter-pill.tone-warn { border-color: var(--warn-border, rgba(246, 193, 98, 0.34)); color: var(--warn-text, #f6c162); } .ds-filter-pill.tone-danger { border-color: var(--danger-border, rgba(255, 148, 154, 0.35)); color: var(--danger-text, #ff949a); } .ds-filter-pill.active { background: var(--accent-tint, rgba(29, 111, 232, 0.14)); border-color: var(--accent-border, rgba(114, 178, 255, 0.34)); color: var(--accent-text, #72b2ff); font-weight: 600; } .ds-filter-pill:focus-visible { outline: 2px solid var(--focus-ring, #7ab8ff); outline-offset: 2px; } .ds-mono { font-family: var(--font-mono, \"Cascadia Mono\", monospace); font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Status Tags",
+      "kind": "chip",
+      "refersTo": "status-tag",
+      "description": "Read-only semantic pill tags denoting proposed rename readiness, warnings, and critical Windows violations.",
+      "html": "<div class=\"ds-tag-tray\"><span class=\"ds-tag ok\">Ready</span><span class=\"ds-tag warn\">Manual review</span><span class=\"ds-tag danger\">Reserved name</span><span class=\"ds-tag accent\">NTFS · 255-char segment</span></div>",
+      "css": ".ds-tag-tray { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 12px; border-radius: var(--radius-lg, 10px); background: var(--bg-surface, #191d24); border: 1px solid var(--border, #282e39); } .ds-tag { display: inline-flex; align-items: center; gap: 4px; padding: 1px 7px; border-radius: var(--radius-pill, 999px); font-family: var(--font-sans, \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif); font-size: 11px; font-weight: 500; border: 1px solid var(--border, #282e39); background: var(--bg-elevated, #20252f); color: var(--text-secondary, #a8b2c1); white-space: nowrap; } .ds-tag.ok { background: var(--ok-tint, rgba(46, 160, 90, 0.14)); border-color: var(--ok-border, rgba(109, 227, 156, 0.32)); color: var(--ok-text, #6de39c); } .ds-tag.warn { background: var(--warn-tint, rgba(212, 137, 28, 0.14)); border-color: var(--warn-border, rgba(246, 193, 98, 0.34)); color: var(--warn-text, #f6c162); } .ds-tag.danger { background: var(--danger-tint, rgba(217, 74, 83, 0.14)); border-color: var(--danger-border, rgba(255, 148, 154, 0.35)); color: var(--danger-text, #ff949a); } .ds-tag.accent { background: var(--accent-tint, rgba(29, 111, 232, 0.14)); border-color: var(--accent-border, rgba(114, 178, 255, 0.34)); color: var(--accent-text, #72b2ff); }"
+    },
+    {
+      "name": "Workbench Surface & Banner",
+      "kind": "card",
+      "refersTo": "surface-panel",
+      "description": "Flat tonal panel container with 1px hairline border, key-value inspection cells, and info safety banner.",
+      "html": "<section class=\"ds-surface\"><div class=\"ds-banner-info\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z\"/><path d=\"M12 9v4\"/><path d=\"M12 17h.01\"/></svg><span>Only filenames and folder names change in-place.</span></div><div class=\"ds-kv-grid\"><div class=\"ds-kv-cell\"><div class=\"ds-kv-k\">Current length</div><div class=\"ds-kv-v\">284 / 259</div></div><div class=\"ds-kv-cell\"><div class=\"ds-kv-k\">Planned length</div><div class=\"ds-kv-v\">221 (fits)</div></div></div></section>",
+      "css": ".ds-surface { display: flex; flex-direction: column; gap: 10px; width: 320px; background: var(--bg-surface, #191d24); border: 1px solid var(--border, #282e39); border-radius: var(--radius-lg, 10px); padding: 16px; color: var(--text-primary, #f0f3f7); font-family: var(--font-sans, \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif); } .ds-banner-info { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; border-radius: var(--radius-md, 8px); background: var(--accent-tint, rgba(29, 111, 232, 0.14)); border: 1px solid var(--accent-border, rgba(114, 178, 255, 0.34)); font-size: 12.5px; line-height: 1.45; } .ds-kv-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } .ds-kv-cell { padding: 8px 10px; border-radius: var(--radius-sm, 6px); border: 1px solid var(--border, #282e39); background: var(--bg-elevated, #20252f); } .ds-kv-k { font-size: 11px; color: var(--text-muted, #8490a3); } .ds-kv-v { margin-top: 2px; font-family: var(--font-mono, \"Cascadia Mono\", monospace); font-variant-numeric: tabular-nums; font-size: 13px; font-weight: 600; color: var(--text-primary, #f0f3f7); }"
+    },
+    {
+      "name": "PathGauge Distribution Ruler",
+      "kind": "custom",
+      "description": "Calibrated UTF-16 path-length signature instrument comparing before vs. after-plan histogram buckets against the active threshold.",
+      "html": "<section class=\"ds-gauge\"><div class=\"ds-gauge-head\"><div class=\"ds-metric\"><span class=\"ds-metric-val\">284 → <span class=\"ds-ok\">221</span></span><span class=\"ds-metric-lbl\">max UTF-16 units (limit 259)</span></div><div class=\"ds-legend\"><span class=\"ds-leg-item\"><span class=\"ds-swatch before\"></span>Before</span><span class=\"ds-leg-item\"><span class=\"ds-swatch after\"></span>After plan</span></div></div><div class=\"ds-hist\"><div class=\"ds-col\"><div class=\"ds-bars\"><div class=\"ds-bar-b\" style=\"height:34%\"></div><div class=\"ds-bar-a\" style=\"height:68%\"></div></div><div class=\"ds-meta\"><span>0–199</span><span>12→24</span></div></div><div class=\"ds-col\"><div class=\"ds-bars threshold\"><div class=\"ds-bar-b\" style=\"height:50%\"></div><div class=\"ds-bar-a\" style=\"height:90%\"></div></div><div class=\"ds-meta\"><span>200–259 <span class=\"ds-limit\">limit</span></span><span>18→32</span></div></div><div class=\"ds-col\"><div class=\"ds-bars over\"><div class=\"ds-bar-b\" style=\"height:75%\"></div><div class=\"ds-bar-a\" style=\"height:0%\"></div></div><div class=\"ds-meta\"><span>260+</span><span>26→0</span></div></div></div></section>",
+      "css": ".ds-gauge { display: flex; flex-direction: column; gap: 12px; width: 340px; padding: 14px 16px; border-radius: var(--radius-lg, 10px); background: var(--bg-surface, #191d24); border: 1px solid var(--border, #282e39); color: var(--text-primary, #f0f3f7); font-family: var(--font-sans, \"Segoe UI Variable Text\", \"Segoe UI\", system-ui, sans-serif); } .ds-gauge-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; flex-wrap: wrap; } .ds-metric { display: flex; align-items: baseline; gap: 6px; } .ds-metric-val { font-family: var(--font-mono, \"Cascadia Mono\", monospace); font-variant-numeric: tabular-nums; font-size: 16px; font-weight: 600; } .ds-ok { color: var(--ok-text, #6de39c); } .ds-metric-lbl { font-size: 11.5px; color: var(--text-muted, #8490a3); } .ds-legend { display: flex; gap: 10px; font-size: 11.5px; color: var(--text-secondary, #a8b2c1); } .ds-leg-item { display: inline-flex; align-items: center; gap: 5px; } .ds-swatch { width: 9px; height: 9px; border-radius: 2px; } .ds-swatch.before { background: var(--bar-before, #c95b63); } .ds-swatch.after { background: var(--bar-after, #3ca367); } .ds-hist { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; } .ds-col { display: flex; flex-direction: column; gap: 4px; } .ds-bars { height: 54px; display: flex; align-items: flex-end; gap: 4px; padding: 6px 6px 0; border-radius: var(--radius-sm, 6px); background: var(--bar-track, #222731); border: 1px solid var(--border, #282e39); } .ds-bars.threshold { border-color: var(--accent-border, rgba(114, 178, 255, 0.34)); } .ds-bars.over { border-color: var(--warn-border, rgba(246, 193, 98, 0.34)); } .ds-bar-b, .ds-bar-a { flex: 1; border-radius: 2px 2px 0 0; transition: height 180ms ease; } .ds-bar-b { background: var(--bar-before, #c95b63); } .ds-bar-a { background: var(--bar-after, #3ca367); } .ds-meta { display: flex; justify-content: space-between; gap: 4px; font-family: var(--font-mono, \"Cascadia Mono\", monospace); font-variant-numeric: tabular-nums; font-size: 11px; color: var(--text-secondary, #a8b2c1); } .ds-limit { font-weight: 600; color: var(--accent-text, #72b2ff); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Calibrated Filesystem Workbench",
+    "overview": "LongPathFix is a native Windows desktop utility rendered inside Tauri 2 + WebView2, designed around the precision and restraint of Windows Terminal, Task Manager, and Sysinternals tooling. Because users arrive with failing backups, broken ZIP extractions, or stalled cloud syncs—and because every rename touches real paths on disk—the interface replaces decorative marketing chrome with immediate diagnostic clarity: a fixed navigation rail, crisp `1px` hairline structural rules, tabular UTF-16 path measurements, and a calibrated before/after distribution ruler (`PathGauge`) sitting directly above a high-density findings table.  The system defaults to a low-glare obsidian/slate dark palette (`color-scheme: dark`) and mirrors every surface, hairline, ink, and status token into a high-contrast porcelain light theme (`data-theme=\"light\"`), tracking Windows system preference when set to Auto. Consistent with the native Windows 11 desktop brief, LongPathFix rejects decorative backdrop blur, neon gradients, uppercase eyebrow kickers above headings, and modal interruptions for routine inspection.",
+    "keyCharacteristics": [
+      "Native Windows 11 `operate` workspace with persistent `224px` left rail (`--rail-width`) and full-viewport `100vh` scroll-contained layout.",
+      "Dual-theme CSS custom properties (`[data-theme=\"dark\"]` and `[data-theme=\"light\"]`) built around neutral slate/porcelain tiers and a single Windows Cobalt primary accent.",
+      "Calibrated UTF-16 code-unit measurement everywhere paths appear, pairing `Cascadia Mono` with `font-variant-numeric: tabular-nums`.",
+      "Tonal layering and `1px` hairline borders at rest; drop shadows appear strictly on floating popovers and focus-trapped modals.",
+      "Full keyboard operation, global `:focus-visible` rings, `prefers-reduced-motion` support, and `aria-live` progress/status announcements."
+    ],
+    "rules": [
+      {
+        "name": "The One Primary Accent Rule",
+        "body": "Cobalt (`--accent`) marks only primary actions, selection, active checkboxes, and progress; semantic colors (emerald, amber, crimson) never replace cobalt on primary workflow buttons, and cobalt never signals severity.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tinted Ink Pairing Rule",
+        "body": "Colored status labels (`--ok-text`, `--warn-text`, `--danger-text`, `--accent-text`) always pair with their translucent `--*-tint` and `--*-border` tokens on neutral surfaces so every badge and banner maintains >= 6.3:1 contrast in both dark and light modes.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Measurement Rule",
+        "body": "Every numeric counter, length delta, bucket tally, and timestamp applies `font-variant-numeric: tabular-nums` so scanning down columns and updating live scan counts never shifts horizontal alignment.",
+        "section": "typography"
+      },
+      {
+        "name": "The Honest Monospace Rule",
+        "body": "`Cascadia Mono` is reserved strictly for filesystem paths, UTF-16 code-unit lengths, registry keys, batch IDs, and keycaps—never as decorative styling on headings or body prose.",
+        "section": "typography"
+      },
+      {
+        "name": "The First-Viewport Workbench Rule",
+        "body": "`Scan & Fix` opens directly into interactive scan controls, threshold presets (`259`, `240`, `200`, `Custom`), fix toggles, and the findings container with zero marketing splash or interstitial onboarding.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Cards, tables, rail items, and drawers stay flat at rest, separated by tonal surface steps and `1px` hairlines; shadows appear only when an overlay (`recent-menu`, `RepairPreviewModal`, or `<= 1360px` overlay drawer) breaks out of document flow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** measure and display every path and filename length in UTF-16 code units with `tabular-nums` (`Cascadia Mono`) so Windows API ceilings (`259`, `240`, `200`, `255`-char segment) remain unambiguous.",
+      "**Do** isolate semantic status tokens (`--ok-*`, `--warn-*`, `--danger-*`) to diagnostic states and keep Cobalt (`--accent`) reserved strictly for primary actions, selection, and progress.",
+      "**Do** support both `[data-theme=\"dark\"]` and `[data-theme=\"light\"]` tokens across every custom component and verify `>= 4.5:1` text and `>= 3:1` non-text contrast in both themes.",
+      "**Do** preserve flat tonal containment (`1px solid var(--border)`) at rest and reserve drop shadows exclusively for popovers and modal/overlay dialogs.",
+      "**Do** gate destructive or disk-mutating actions (`Apply Safe Renames`, `Confirm Remove`, `Enable Windows Long Paths`) behind explicit dry-run verification, two-step confirmation, or UAC prompts."
+    ],
+    "donts": [
+      "**Don't** add uppercase eyebrows/kickers above headings, decorative gradient text, or `backdrop-filter` glass blur to workbench panels.",
+      "**Don't** introduce external icon fonts, emoji icons, or webfont requests; draw UI glyphs within the uniform `24x24` `1.6px`-stroke inline SVG system and use native Windows 11 typography (`Segoe UI Variable` + `Cascadia Mono`).",
+      "**Don't** color primary workflow buttons with status colors (`--ok`, `--warn`, `--danger`) or use `--accent` to indicate severity.",
+      "**Don't** drop keyboard focus rings (`:focus-visible`), `prefers-reduced-motion` overrides, or screen-reader live regions (`role=\"status\"`, `aria-live=\"polite\"`) on scan, repair, or modal flows."
+    ]
+  }
+}

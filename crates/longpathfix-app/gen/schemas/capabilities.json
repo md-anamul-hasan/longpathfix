@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Least-privilege capabilities for the main LongPathFix window: events and folder/save file dialogs.","local":true,"windows":["main"],"permissions":["core:default","dialog:allow-open","dialog:allow-save"]}}

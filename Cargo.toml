@@ -1,0 +1,18 @@
+[workspace]
+resolver = "2"
+members = ["crates/longpathfix-core", "crates/longpathfix-app"]
+
+[workspace.package]
+version = "2.0.0"
+edition = "2021"
+license = "MIT"
+authors = ["Md Anamul Hasan"]
+repository = "https://github.com/md-anamul-hasan/longpathfix"
+rust-version = "1.80"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+panic = "abort"
+strip = true

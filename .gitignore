@@ -1,22 +1,27 @@
-## Build and Output directories
-[Bb]in/
-[Oo]bj/
-[Oo]ut/
-publish/
-scratch/
-[Ll]og/
-[Ll]ogs/
+# Rust / Cargo / Tauri
+target/
+crates/*/target/
+Cargo.lock.bak
 
-## Visual Studio & JetBrains
-.vs/
-.idea/
-*.user
-*.suo
+# Frontend toolchain (build-time only; never shipped as runtime)
+src-ui/node_modules/
+src-ui/dist/
 
-## OS generated files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-## Release output (scripts/package-release.ps1) - never commit
+# Release & temporary build artifacts
 dist/
+*.exe
+*.msi
+*.pdb
+!crates/longpathfix-app/icons/*.ico
+
+# Impeccable transient review captures & session caches
+.impeccable/review/
+
+# IDE & OS metadata
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.user
