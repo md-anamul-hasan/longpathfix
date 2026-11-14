@@ -14,8 +14,8 @@ LongPathFix `2.0.0` is a complete ground-up rewrite from `.NET 10 / WPF` to a **
 
 | File | Size | SHA-256 | Purpose |
 | --- | ---: | --- | --- |
-| `LongPathFix-Setup-2.0.0.exe` | 3,644,513 bytes | `4723643f2b3261c0bdb128b3c80ad35ce473107f462c45dd69da59d1ec3530ed` | Windows 10/11 x64 installer (uses built-in Edge WebView2 Runtime) |
-| `LongPathFix-2.0.0-win64-portable.zip` | 2,100,358 bytes | `7ed68e17551c98ea60f5c79ea40bf9b7ab05975a2e61c57b63e3dec893a32b3a` | Portable x64 bundle (`LongPathFix.exe` + notices) |
+| `LongPathFix-Setup-2.0.0.exe` | 3,644,522 bytes | `64de76c037042267d2a7a0299911d6aa3fdb8c41113bfc3612a5ec9fa87da14d` | Windows 10/11 x64 installer (uses built-in Edge WebView2 Runtime) |
+| `LongPathFix-2.0.0-win64-portable.zip` | 2,100,356 bytes | `57cae3a5b66f74e16378bc6710afb82de7a47e26d5d218910ccdf023c416a579` | Portable x64 bundle (`LongPathFix.exe` + notices) |
 | `SHA256SUMS.txt` | — | — | SHA-256 verification file |
 
 Verify a download in PowerShell:

@@ -141,12 +141,8 @@ pub fn is_reserved(name: &str) -> bool {
     let mut chars = stem.chars();
     let prefix: String = (&mut chars).take(3).collect();
     let rest: String = chars.collect();
-    if (prefix.eq_ignore_ascii_case("COM") || prefix.eq_ignore_ascii_case("LPT"))
+    (prefix.eq_ignore_ascii_case("COM") || prefix.eq_ignore_ascii_case("LPT"))
         && matches!(rest.as_str(), "\u{00B9}" | "\u{00B2}" | "\u{00B3}")
-    {
-        return true;
-    }
-    false
 }
 
 /// Returns `true` if `name` contains ASCII control chars (< 32) or Windows-disallowed characters `<>:"/\|?*`.

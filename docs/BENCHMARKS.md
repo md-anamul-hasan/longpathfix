@@ -45,5 +45,5 @@ Benchmarks compare the legacy `.NET 10 / WPF` (`1.1.0`) implementation against t
 | Artifact | Legacy `.NET 10` (`1.1.0`) | Rust + Tauri 2 (`2.0.0`) | Reduction |
 | --- | ---: | ---: | --- |
 | Standalone executable (`LongPathFix.exe`) | 61,675,812 bytes (~58.82 MiB) | 5,140,480 bytes (~4.90 MiB) | **12.0× smaller** (-91.7%) |
-| Windows installer (`LongPathFix-Setup-*.exe`) | 56,652,556 bytes (~54.03 MiB) | 3,644,513 bytes (~3.48 MiB) | **15.5× smaller** (-93.6%) |
-| Portable archive (`LongPathFix-2.0.0-win64-portable.zip`) | — | 2,100,358 bytes (~2.00 MiB) | New in 2.0.0 |
+| Windows installer (`LongPathFix-Setup-*.exe`) | 56,652,556 bytes (~54.03 MiB) | 3,644,522 bytes (~3.48 MiB) | **15.5× smaller** (-93.6%) |
+| Portable archive (`LongPathFix-2.0.0-win64-portable.zip`) | — | 2,100,356 bytes (~2.00 MiB) | New in 2.0.0 |
