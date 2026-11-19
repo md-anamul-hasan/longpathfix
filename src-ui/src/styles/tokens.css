@@ -1,11 +1,11 @@
-/* Technical Glassmorphism v1.0 type: Google Sans (OFL, bundled) and JetBrains Mono (OFL, bundled). */
-@font-face { font-family: 'Google Sans'; src: url('/fonts/GoogleSans-Variable.woff2') format('woff2-variations'), url('/fonts/GoogleSans-Variable.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+/* Technical Glassmorphism v1.0 type: Inter (OFL, bundled; handoff --font-sans) and JetBrains Mono (OFL, bundled). */
+@font-face { font-family: 'Inter'; src: url('/fonts/Inter-Variable.woff2') format('woff2-variations'), url('/fonts/Inter-Variable.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: 'JetBrains Mono'; src: url('/fonts/JetBrainsMono-Regular.otf') format('opentype'); font-weight: 400; font-display: swap; }
 @font-face { font-family: 'JetBrains Mono'; src: url('/fonts/JetBrainsMono-Bold.otf') format('opentype'); font-weight: 700; font-display: swap; }
 
 :root {
-  --font-sans: 'Google Sans', 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
-  --font-display: 'Google Sans', 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+  --font-sans: 'Inter', 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Inter', 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Cascadia Mono', Consolas, monospace;
 
   --radius-sm: 6px;
@@ -47,7 +47,7 @@
   --accent: #3b82f6;
   --accent-hover: #60a5fa;
   --accent-fg: #020617;
-  --accent-text: #2dd4bf;
+  --accent-text: #60a5fa; /* handoff dark cobalt text */
   --accent-tint: rgba(59, 130, 246, 0.16);
   --accent-border: rgba(59, 130, 246, 0.40);
 
