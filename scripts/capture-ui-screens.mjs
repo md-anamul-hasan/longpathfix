@@ -282,7 +282,7 @@ function buildMockInitScript() {
             return null;
           case "get_bootstrap":
             return {
-              version: "2.1.0",
+              version: "2.1.1",
               config: state.config,
               policy: state.policy,
               volumes: state.volumes,
