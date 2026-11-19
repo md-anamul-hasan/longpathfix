@@ -2,6 +2,11 @@
 
 All notable changes to LongPathFix are documented in this file. Versioning follows [Semantic Versioning](https://semver.org/); the canonical product version lives in `Cargo.toml`.
 
+## [2.1.0] - 2026-11-19
+
+### Changed
+- New look: Technical Glassmorphism v1.0, the design system of mdanamulhasan.com. Slate canvas, Precision Cobalt accent with PLM teal highlights in dark mode, hairline borders, crisp 6/10/14 px corners, restrained shadows.
+
 ## [2.0.0] - 2026-11-14
 
 Complete architectural transformation from `.NET 10 / WPF` to a 100% native **Rust + Tauri 2** Windows desktop application with a redesigned Fluent-inspired TypeScript/React interface.

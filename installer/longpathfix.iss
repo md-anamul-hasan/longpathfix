@@ -2,7 +2,7 @@
 ; Keeps AppId {25FFAF8A-4D8A-5C88-B27E-FD990DE9FB1B} for seamless upgrades from v1.x
 
 #ifndef MyAppVersion
-  #define MyAppVersion "2.0.0"
+  #define MyAppVersion "2.1.0"
 #endif
 
 #define MyAppName "LongPathFix"
